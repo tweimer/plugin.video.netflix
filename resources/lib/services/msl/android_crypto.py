@@ -11,6 +11,7 @@ from __future__ import absolute_import, division, unicode_literals
 
 import base64
 import json
+
 from future.utils import raise_from
 
 import xbmcdrm
@@ -18,6 +19,7 @@ import xbmcdrm
 from resources.lib.common.exceptions import MSLError
 from resources.lib.database.db_utils import TABLE_SESSION
 from resources.lib.globals import G
+from resources.lib.utils.esn import ForceWidevine
 from resources.lib.utils.logging import LOG
 from .base_crypto import MSLBaseCrypto
 
@@ -66,7 +68,7 @@ class AndroidMSLCrypto(MSLBaseCrypto):
         else:
             LOG.warn('Widevine CryptoSession system id not obtained!')
         LOG.debug('Widevine CryptoSession security level: {}', drm_info['security_level'])
-        if G.ADDON.getSettingBool('force_widevine_l3'):
+        if G.ADDON.getSettingString('force_widevine') != ForceWidevine.DISABLED:
             LOG.warn('Widevine security level is forced to L3 by user settings!')
         LOG.debug('Widevine CryptoSession current hdcp level: {}', drm_info['hdcp_level'])
         LOG.debug('Widevine CryptoSession max hdcp level supported: {}', drm_info['hdcp_level_max'])
@@ -88,7 +90,7 @@ class AndroidMSLCrypto(MSLBaseCrypto):
         # No key update supported -> remove existing keys
         self.crypto_session.RemoveKeys()
         key_request = self.crypto_session.GetKeyRequest(  # pylint: disable=assignment-from-none
-            bytearray([10, 122, 0, 108, 56, 43]), 'application/xml', True, dict())
+            bytes([10, 122, 0, 108, 56, 43]), 'application/xml', True, dict())
 
         if not key_request:
             raise MSLError('Widevine CryptoSession getKeyRequest failed!')
@@ -110,7 +112,7 @@ class AndroidMSLCrypto(MSLBaseCrypto):
     def _provide_key_response(self, data):
         if not data:
             raise MSLError('Missing key response data')
-        self.keyset_id = self.crypto_session.ProvideKeyResponse(bytearray(data))  # pylint: disable=assignment-from-none
+        self.keyset_id = self.crypto_session.ProvideKeyResponse(data)  # pylint: disable=assignment-from-none
         if not self.keyset_id:
             raise MSLError('Widevine CryptoSession provideKeyResponse failed')
         LOG.debug('Widevine CryptoSession provideKeyResponse successful')
@@ -124,12 +126,12 @@ class AndroidMSLCrypto(MSLBaseCrypto):
         :return: Serialized JSON String of the encryption Envelope
         """
         from os import urandom
-        init_vector = bytearray(urandom(16))
+        init_vector = bytes(urandom(16))
         # Add PKCS5Padding
         pad = 16 - len(plaintext) % 16
         padded_data = plaintext + ''.join([chr(pad)] * pad)
-        encrypted_data = self.crypto_session.Encrypt(bytearray(self.key_id),
-                                                     bytearray(padded_data.encode('utf-8')),
+        encrypted_data = self.crypto_session.Encrypt(self.key_id,
+                                                     padded_data.encode('utf-8'),
                                                      init_vector)
 
         if not encrypted_data:
@@ -146,8 +148,7 @@ class AndroidMSLCrypto(MSLBaseCrypto):
 
     def decrypt(self, init_vector, ciphertext):
         """Decrypt a ciphertext"""
-        decrypted_data = self.crypto_session.Decrypt(bytearray(self.key_id), bytearray(ciphertext),
-                                                     bytearray(init_vector))
+        decrypted_data = self.crypto_session.Decrypt(self.key_id, ciphertext, init_vector)
         if not decrypted_data:
             raise MSLError('Widevine CryptoSession decrypt failed!')
 
@@ -157,8 +158,7 @@ class AndroidMSLCrypto(MSLBaseCrypto):
 
     def sign(self, message):
         """Sign a message"""
-        signature = self.crypto_session.Sign(bytearray(self.hmac_key_id),
-                                             bytearray(message.encode('utf-8')))
+        signature = self.crypto_session.Sign(self.hmac_key_id, message.encode('utf-8'))
         if not signature:
             raise MSLError('Widevine CryptoSession sign failed!')
         return base64.standard_b64encode(signature).decode('utf-8')
