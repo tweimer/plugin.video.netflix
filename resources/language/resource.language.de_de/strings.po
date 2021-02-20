@@ -554,11 +554,11 @@ msgstr "Deaktiviere Benachrichtigung beim Start"
 
 msgctxt "#30142"
 msgid "Custom"
-msgstr "Individuelle Ansicht"
+msgstr "Individuell"
 
 msgctxt "#30143"
 msgid "Custom view ID"
-msgstr "Individuelle Ansicht ID"
+msgstr "Individuelle Ansichts-ID"
 
 msgctxt "#30144"
 msgid "Disable WebVTT subtitle support"
