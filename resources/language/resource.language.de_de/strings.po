@@ -146,7 +146,7 @@ msgstr "Allgemein"
 # Unused 30032
 msgctxt "#30033"
 msgid "Enable Dolby Digital Plus (DDPlus HQ and Atmos on Premium)"
-msgstr "Aktiviere Dolby Digital Plus (DDPlus HQ und Atmos mit Premium)"
+msgstr "Dolby Digital Plus aktivieren (DDPlus HQ und Atmos mit Premium)"
 
 # Unused 30034
 msgctxt "#30035"
@@ -355,11 +355,11 @@ msgstr "Subgenres durchstöbern"
 
 msgctxt "#30090"
 msgid "Browse through related video lists and discover more content."
-msgstr "Durchstöbere verwandte Videolisten und entdecke weitere Inhalte."
+msgstr "Durchsuche verwandte Videolisten und entdecke weitere Inhalte."
 
 msgctxt "#30091"
 msgid "Browse and manage contents that were exported to the Kodi library."
-msgstr "Durchsuche und verwalte Inhalte die der Kodi-Bibliothek hinzugefügt wurden."
+msgstr "Durchsuche und verwalte Inhalte die in die Kodi-Bibliothek exporiert wurden."
 
 msgctxt "#30092"
 msgid "Search for content and easily find what you want to watch."
@@ -367,11 +367,11 @@ msgstr "Suche gezielt nach Inhalten und finde was du sehen willst."
 
 msgctxt "#30093"
 msgid "Browse content by genre and easily discover related content."
-msgstr "Durchstöbere die Inhalte nach Genre und entdecke bequem verwandte Inhalte "
+msgstr "Durchsuche die Inhalte nach Genre und entdecke bequem verwandte Inhalte."
 
 msgctxt "#30094"
 msgid "Browse recommendations and pick up on something new you might like."
-msgstr "Sieh dir Empfehlungen an und entdecke neue Inhalte die dir gefallen könnten."
+msgstr "Durchsuche die Empfehlungen und entdecke etwas, das dir gefallen könnten."
 
 msgctxt "#30095"
 msgid "All TV shows"
@@ -534,7 +534,7 @@ msgstr "Falls Sie Kodi oder das Addon gerade erst gestartet haben, kann es sein,
 
 msgctxt "#30139"
 msgid "Enable IPC over HTTP (use when Addon Signals timeout messages appear)"
-msgstr "Aktiviere IPC über HTTP (bei Addon Signals Timeouts benutzen)"
+msgstr "IPC über HTTP aktivieren (bei Addon Signals Timeouts benutzen)"
 
 msgctxt "#30140"
 msgid "Import existing library"
@@ -668,7 +668,7 @@ msgstr "Film-Kategorien"
 
 msgctxt "#30176"
 msgid "Enable STRM resume workaround"
-msgstr "Aktiviere Workaround für STRM-Wiedergabe-Fortsetzung"
+msgstr "Workaround für STRM-Wiedergabe-Fortsetzung aktivieren"
 
 msgctxt "#30177"
 msgid "Ask to resume the video"
@@ -680,7 +680,7 @@ msgstr "Up Next Addon-Einstellungen öffnen"
 
 msgctxt "#30179"
 msgid "Show trailers and more"
-msgstr "Zeige Trailer und mehr"
+msgstr "Trailer und mehr anzeigen"
 
 msgctxt "#30180"
 msgid "There has been a problem with login, it is possible that your account has not been confirmed or reactivated."
@@ -692,7 +692,7 @@ msgstr "Untertitel immer anzeigen, wenn bevorzugte Audiosprache nicht verfügbar
 
 msgctxt "#30182"
 msgid "Export NFO files"
-msgstr "Exportiere NFO-Dateien"
+msgstr "NFO-Dateien exportieren"
 
 msgctxt "#30183"
 msgid "Do you want to export NFO files for the {}?"
@@ -704,7 +704,7 @@ msgstr "NFO-Dateien"
 
 msgctxt "#30185"
 msgid "Enable NFO files export"
-msgstr "Aktiviere Export von NFO-Dateien"
+msgstr "Export von NFO-Dateien aktivieren"
 
 msgctxt "#30186"
 msgid "For Movies"
@@ -737,7 +737,7 @@ msgstr "NFO-Details in Serien einschließen"
 
 msgctxt "#30194"
 msgid "Limit video stream resolution to"
-msgstr "Begrenze Auflösung für Videostreams auf"
+msgstr "Auflösung für Videostreams begrenzen auf"
 
 msgctxt "#30195"
 msgid "Export new episodes"
@@ -761,7 +761,7 @@ msgstr "Geteilte Bibliothek (Kodi MySQL-Server wird benötigt)"
 
 msgctxt "#30200"
 msgid "Use shared library MySQL-database"
-msgstr "Benutze MySQL-Datenbank für geteilte Bibliothek"
+msgstr "MySQL-Datenbank für geteilte Bibliothek verwenden"
 
 msgctxt "#30201"
 msgid "Username"
@@ -781,7 +781,7 @@ msgstr "Port"
 
 msgctxt "#30205"
 msgid "Test database connection"
-msgstr "Teste Datenbankverbindung"
+msgstr "Datenbankverbindung testen"
 
 msgctxt "#30206"
 msgid "ERROR: The MySQL-database is not reachable - the local database will be used"
@@ -830,7 +830,7 @@ msgstr "Farbe der als \"Erinnere mich\" markierten Titel"
 # Unused 30217 to 30218
 msgctxt "#30219"
 msgid "Disable notification for synchronization completed"
-msgstr "Deaktiviere Benachrichtigung für abgeschlossene Synchronisierung"
+msgstr "Benachrichtigung für abgeschlossene Synchronisierung deaktivieren"
 
 msgctxt "#30220"
 msgid "The Kodi library has been updated"
