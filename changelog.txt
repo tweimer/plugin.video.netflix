@@ -1,3 +1,21 @@
+v1.21.0 (2023-03-12)
+- Fix TypeError that prevent to load menu video contents (due to website bug)
+- Fix possible Server disconnected error on playback start that cause broken watched status sync
+- Cleanup video codec settings
+- Add support to AV1 codec, atm available on non-Android systems (Kodi 21 only, available on future nightlies)
+- Add support to VP9 Profile 2 (Kodi 21 only, available on future nightlies)
+- Add Android HDR detection at first addon start-up, ask to enable it (Kodi 20)
+- Updated NFAuthenticationKey software/script
+- Update translations it
+
+v1.20.8 (2023-02-24)
+- Fix Kodi library update when you add/remove tv shows and movies
+- Fix wrong path added to Kodi sources from library setting
+
+v1.20.7 (2023-02-21)
+- Workaround/fix for wrong plot language due to website bug
+- Cleanup/fix ListItem deprecated methods/properties (Kodi 20)
+
 v1.20.6 (2023-02-09)
 - Fix SQLite error on startup using some linux systems
 - Update translations po, cs_cz

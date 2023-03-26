@@ -1,6 +1,6 @@
 # Netflix Plugin for Kodi (plugin.video.netflix)
 
-[![Kodi version](https://img.shields.io/badge/kodi%20versions-18--19--20-blue)](https://kodi.tv/)
+[![Kodi version](https://img.shields.io/badge/kodi%20versions-19--20-blue)](https://kodi.tv/)
 [![GitHub release](https://img.shields.io/github/release/castagnait/plugin.video.netflix.svg)](https://github.com/castagnait/plugin.video.netflix/releases)
 [![CI](https://github.com/castagnait/plugin.video.netflix/workflows/CI/badge.svg)](https://github.com/castagnait/plugin.video.netflix/actions?query=workflow:CI)
 [![Code Climate - Maintainability](https://api.codeclimate.com/v1/badges/9fbe3ac732f86c05ff00/maintainability)](https://codeclimate.com/github/CastagnaIT/plugin.video.netflix/maintainability)
@@ -34,7 +34,7 @@ The trademark "Netflix" is registered by "Netflix, Inc."
 
 Install add-on via repository - provide automatic installation of updates:<br/>
 [CastagnaIT Repository for Kodi - repository.castagnait-2.0.0.zip](https://github.com/castagnait/repository.castagnait/raw/kodi/repository.castagnait-2.0.0.zip)<br/>
-_NOTICE: Add-on version for Kodi 18 is deprecated [#975](https://github.com/CastagnaIT/plugin.video.netflix/issues/975), we highly recommend upgrading to Kodi 19 or above._
+_**NOTICE FOR KODI v18**: Support and development for Kodi v18 has been stopped [#975](https://github.com/CastagnaIT/plugin.video.netflix/issues/975), use Kodi v19 or above._
 
 Install add-on manually - updates should always be installed manually:<br/>
 https://castagnait.github.io/repository.castagnait/ (url to add in the Kodi file manager)
